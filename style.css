@@ -1,4 +1,56 @@
-body {background-color:tan;}
-h1{color:green;}
+body {
+    font-family: 'Open Sans', sans-serif;
+    align-items: center;
+    background-color: black;
+}
 
+h1 {
+    font-weight: 750;
+    color: gray;
+}
 
+div {
+    background-color: white;
+    display: inline-block;
+    margin-left: 35%;
+    width: 28%;
+    padding: 2px 10px 10px 10px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    align-items: center;
+    flex: block;
+}
+
+.input {
+    margin-left: 10%;
+}
+
+input {
+    align-items: center;
+}
+
+#principal {
+    margin-left: 18%;
+    align-items: center;
+    border: 1px solid gray;
+    border-radius: 2px;
+}
+
+#rate {
+    margin-left: 8%;
+    align-items: center;
+    cursor: pointer;
+}
+
+select {
+    margin-left: 10%;
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+    margin-left: 10%;
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding: 3px;
+}

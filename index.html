@@ -1,16 +1,45 @@
 <html>
+
     <head>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <title>Web App - Simple Interest Calculator</title>
     </head>
+
     <body>
-        <h1>Simple Interest Calculator</h1>
+        <div>
+            <h1>Simple Interest Calculator</h1>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+            <p class="input">Amount <input type="number" id="principal"></p>
+            <p class="input">Interest Rate <input type="range" min="1.0" max="20.0" step="0.25" class="slider" value="1.0" id="rate" class="input"> <span id="demo"></span>%</p>
+            <p class="input">No. of Years <select name="years" id="year" class="input">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select></p>
+        
+            <button onclick="compute()">Compute Interest</button>
+            <span id="result"></span>
+            <p>&copy; Sharad Maurya</p>
+        </div>
 
-        <button onclick="compute()">Compute</button>
+        <script>
+            var slider = document.getElementById("rate");
+            var output = document.getElementById("demo");
+            output.innerHTML = slider.value;
+
+            slider.oninput = function() {
+                output.innerHTML = this.value;
+            }
+        </script>
     </body>
+
 </html>
